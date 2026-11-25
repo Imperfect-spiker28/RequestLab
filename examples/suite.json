@@ -1,0 +1,17 @@
+{
+  "base_url": "http://127.0.0.1:8000",
+  "cases": [
+    {
+      "name": "Service health endpoint",
+      "method": "GET",
+      "path": "/health",
+      "expect": {
+        "status": 200,
+        "max_ms": 500,
+        "json": {
+          "status": "ok"
+        }
+      }
+    }
+  ]
+}
