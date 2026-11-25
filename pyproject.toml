@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "requestlab"
+version = "0.1.0"
+description = "Zero-dependency HTTP/REST API contract & latency test runner CLI for CI/CD."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Anwin CM", email = "Anwincm8@gmail.com" }]
+keywords = ["http", "api-testing", "rest", "cli", "ci-cd", "contract-testing"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+requestlab = "requestlab.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
